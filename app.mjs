@@ -19,7 +19,13 @@ app.get('/olivia', (req, res) => {
   res.sendFile(join(__dirname, 'public', 'olivia.html')) 
 })
 
+app.get('/api/olivia', (req, res) => {
+  // res.send('olivia. <a href="/">home</a>')
+  const myVar = 'Hello from server!';
+  res.json({ myVar });
+})
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
 })
+
