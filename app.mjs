@@ -1,11 +1,17 @@
+import 'dotenv/config'
 import express from 'express'
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { MongoClient, ServerApiVersion } from 'mongodb';
+
+
 
 const app = express()
 const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const uri = process.env.MONGO_URI;
+console.log("get .env uri:", uri);
 
 app.use(express.static(join(__dirname, 'public')));
 app.use(express.json());
