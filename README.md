@@ -1,5 +1,2 @@
-This is me updating the README.md file
-
-
-This is my dog!
-![Maple, My Dog](maple.jpg)
+This is the project we have been working on in class
+in preparations for our mini app and getting the class started.

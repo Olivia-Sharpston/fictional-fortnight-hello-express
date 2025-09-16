@@ -54,7 +54,7 @@ async function connectDB(){
 connectDB;
 
 app.get('/', (req, res) => {
-  res.send('Hello Express from Render. <a href="/olivia">olivia</a> <a href="/traditional-forms">Traditional Forms</a>')
+  res.send('Hello Express from Render. <a href="/olivia">olivia</a> <a href="/traditional-forms">Traditional Forms</a> <a href="/student-crud">Student Crud</a>')
 })
 // endpoints...middlewares...apis?
 
@@ -133,7 +133,8 @@ app.post('/api/students', async (req, res) => {
 
     const student = { name, age: parseInt(age), grade };
     const result = await db.collection('students').insertOne(student);
-    
+
+
     res.status(201).json({ 
       message: 'Student created successfully',
       studentId: result.insertedId,
